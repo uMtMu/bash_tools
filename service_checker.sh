@@ -7,7 +7,7 @@ export DISPLAY=:0 #needed if you are running a simple gui app.
 process="${1:-auditd}"
 service="${2:-auditd}"
 makerun="${3:-/sbin/auditd}"
-grep_key"${4:-runnig}"
+grep_key="${4:-running}"
 EMAIL="umut.cakir@sonteklif.com"
 
 if ps ax | grep -v grep | grep -w $process > /dev/null
