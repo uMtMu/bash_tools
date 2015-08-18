@@ -8,7 +8,7 @@ process="${1:-auditd}"
 service="${2:-auditd}"
 makerun="${3:-/sbin/auditd}"
 grep_key="${4:-running}"
-EMAIL="umut.cakir@sonteklif.com"
+EMAIL="a.b@xxx.com"
 
 if ps ax | grep -v grep | grep -w $process > /dev/null
 then
@@ -16,8 +16,8 @@ then
 else
         process="audit"
         subject="Subject:$process is down"
-        to="To:umut.cakir@sonteklif.com"
-        from="From:alert@sonteklif.com"
+        to="To:a.b@xxx.com"
+        from="From:alert@xxx.com"
         body="$process is down. Trying to restart $process.."
         echo -e "$to\n$from\n$subject\n$body" | sendmail -t $to
 
@@ -29,8 +29,8 @@ then
         echo "$service service is running"
 else
         subject="Subject:$service is down"
-        to="To:umut.cakir@sonteklif.com"
-        from="From:alert@sonteklif.com"
+        to="To:a.b@xxx.com"
+        from="From:alert@xxx.com"
         body="$service is down. Trying to restart $service.."
         echo -e "$to\n$from\n$subject\n$body" | sendmail -t $to
 
