@@ -1,0 +1,9 @@
+function loggraph {
+   ratio=${1:-"5"}
+   for i in `du -h /root/log_backups/* | tail -n 30 | awk '{print $1 }' | tr -d "M"`;
+   do
+       b=`bc <<< "$i/$ratio"`;
+       printf "%0.s." `seq 1 $b`;
+       printf "$i\n";
+   done;
+}
