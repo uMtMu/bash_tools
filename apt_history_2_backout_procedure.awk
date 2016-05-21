@@ -1,3 +1,6 @@
+##
+## awk -f apt_history_2_backout_procedure.awk /var/log/apt/history.log
+##
 BEGIN {
     RS="\n\n";
     FS="\n";
