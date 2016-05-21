@@ -30,7 +30,7 @@ NR > 1{
     for(i in packages)
     {
         packages[i] = i==package_size ? packages[i] : packages[i] ")";
-        print packages[i] > report_filename;
+        print "\t" packages[i] > report_filename;
     }
     print "\n" > report_filename;
 }
