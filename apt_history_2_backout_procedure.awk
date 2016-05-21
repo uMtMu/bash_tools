@@ -4,9 +4,10 @@ BEGIN {
 }
 
 NR > 1{
+    report_dir = "/home/umt/apt_backout_reports";
     # Report filename to write
     split($1,begin_date," ");
-    report_filename = begin_date[2] ".txt";
+    report_filename = report_dir "/" begin_date[2] ".txt";
 
     # Language change
     gsub("Start-Date","Başlangıç",$1); 
