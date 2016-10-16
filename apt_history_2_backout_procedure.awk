@@ -1,12 +1,12 @@
 ##
-## awk -f apt_history_2_backout_procedure.awk /var/log/apt/history.log
+## tail -n +2 /var/log/apt/history.log | awk -f apt_history_2_backout_procedure.awk
 ##
 BEGIN {
     RS="\n\n";
     FS="\n";
 }
 
-NR > 1{
+{
     report_dir = "/home/umt/apt_backout_reports";
     # Report filename to write
     split($1,begin_date," ");
