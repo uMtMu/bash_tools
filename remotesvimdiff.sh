@@ -1,3 +1,7 @@
+# 180306 - uMtMu
+# vimdiff scp://username@remote1:/filedir scp://username@remote2:/filedir -> netrw err
+# i need root priv with sudo
+
 rvimdiff ()
 {
     if [ "$#" -lt 3 ]
